@@ -6,8 +6,8 @@ export function Posts() {
   return (
     <div>
       <PostList />
-      <NewPost />
       <PostDetails />
+      <NewPost />
     </div>
   );
 }

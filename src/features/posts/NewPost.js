@@ -29,18 +29,28 @@ export const NewPost = () => {
           <form onSubmit={handleSubmit}>
             <Field name="title" validate={required}>
               {({ input, meta }) => (
-                <div>
+                <div className="form-group">
                   <label>Title</label>
-                  <input {...input} type="text" placeholder="Title" />
+                  <input
+                    className="form-control"
+                    {...input}
+                    type="text"
+                    placeholder="Title"
+                  />
                   {meta.error && meta.touched && <span>{meta.error}</span>}
                 </div>
               )}
             </Field>
             <Field name="categories" validate={required}>
               {({ input, meta }) => (
-                <div>
+                <div className="form-group">
                   <label>Category</label>
-                  <input {...input} type="text" placeholder="Category" />
+                  <input
+                    className="form-control"
+                    {...input}
+                    type="text"
+                    placeholder="Category"
+                  />
                   {meta.error && meta.touched && <span>{meta.error}</span>}
                 </div>
               )}
@@ -50,9 +60,14 @@ export const NewPost = () => {
               validate={composeValidators(required, minValue(18))}
             >
               {({ input, meta }) => (
-                <div>
+                <div className="form-group">
                   <label>Content</label>
-                  <input {...input} type="text" placeholder="Content" />
+                  <input
+                    className="form-control"
+                    {...input}
+                    type="text"
+                    placeholder="Content"
+                  />
                   {meta.error && meta.touched && <span>{meta.error}</span>}
                 </div>
               )}
