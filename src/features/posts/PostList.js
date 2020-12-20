@@ -24,15 +24,15 @@ export function PostList(props) {
   const renderPosts = (posts = []) => {
     return posts.map((post) => {
       return (
-        <li className="list-group-item" key={post.id}>
-          <span className="pull-xs-right">{post.categories}</span>
-          <strong>{post.title}</strong>
-          <strong>{post.content}</strong>
-          <button onClick={() => handleDelete(post.id)}> Delete</button>
-          <button onClick={() => handleGetDetails(post.id)}>
-            {" "}
-            Get Details
-          </button>
+        <li className="list-group-item row" key={post.id}>
+          <span className="col-3">{post.title}</span>
+          <div className="col-3">
+            <button onClick={() => handleDelete(post.id)}> Delete</button>
+            <button onClick={() => handleGetDetails(post.id)}>
+              {" "}
+              Get Details
+            </button>
+          </div>
         </li>
       );
     });
