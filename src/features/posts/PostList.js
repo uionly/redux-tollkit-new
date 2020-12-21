@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { NewPostModal } from "./NewPost";
+
 import {
   fetchPostsAsync,
   deletePostAsync,
@@ -24,12 +26,11 @@ export function PostList(props) {
   const renderPosts = (posts = []) => {
     return posts.map((post) => {
       return (
-        <li className="list-group-item row" key={post.id}>
-          <span className="col-3">{post.title}</span>
-          <div className="col-3">
+        <li className="list-group-item" key={post.id}>
+          <div>{post.title}</div>
+          <div>
             <button onClick={() => handleDelete(post.id)}> Delete</button>
             <button onClick={() => handleGetDetails(post.id)}>
-              {" "}
               Get Details
             </button>
           </div>
@@ -39,7 +40,8 @@ export function PostList(props) {
   };
   return (
     <div>
-      <h3>Posts</h3>
+      <NewPostModal />
+      <strong>Posts</strong>
       <ul className="list-group">{renderPosts(posts)}</ul>
     </div>
   );

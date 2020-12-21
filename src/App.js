@@ -1,9 +1,8 @@
-import React from "react";
 import { Posts } from "./features/posts/Posts";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import { Youtube } from "./features/youtube/youtube";
 export default function App() {
   return (
     <Router>
@@ -16,7 +15,7 @@ export default function App() {
 }
 function RenderComp() {
   return (
-    <div className="App-padding-20">
+    <div className="row">
       <Switch>
         <Route path="/counter">
           <Counter />
@@ -33,7 +32,7 @@ function RenderComp() {
 }
 function RenderRoutes() {
   return (
-    <div className="App-padding-20">
+    <div className="row">
       <nav className="navbar-nav">
         <ul>
           <li className="nav-item">
@@ -51,5 +50,5 @@ function RenderRoutes() {
   );
 }
 function Home() {
-  return <h2>Home</h2>;
+  return <Youtube />;
 }

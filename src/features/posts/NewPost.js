@@ -3,8 +3,17 @@ import { useDispatch } from "react-redux";
 
 import { createPostAsync } from "./postsSlice";
 import { Form, Field } from "react-final-form";
-export const NewPost = () => {
+import "react-simple-hook-modal/dist/styles.css";
+
+import {
+  ModalProvider,
+  Modal,
+  useModal,
+  ModalTransition,
+} from "react-simple-hook-modal";
+const NewPost = (props) => {
   const onSubmit = async (post) => {
+    props.close();
     dispatch(createPostAsync(post));
   };
 
@@ -23,6 +32,7 @@ export const NewPost = () => {
   return (
     <div>
       <h1>Add new book</h1>
+      <NewPostModal />
       <Form
         onSubmit={onSubmit}
         render={({ handleSubmit, form, submitting, pristine, values }) => (
@@ -91,3 +101,27 @@ export const NewPost = () => {
     </div>
   );
 };
+
+const MyComponent = () => {
+  const { isModalOpen, openModal, closeModal } = useModal();
+
+  return (
+    <>
+      <button onClick={openModal}>New Post</button>
+      <Modal
+        id="any-unique-identifier"
+        isOpen={isModalOpen}
+        transition={ModalTransition.BOTTOM_UP}
+      >
+        <button onClick={closeModal}>Close</button>
+        <NewPost close={closeModal} />
+      </Modal>
+    </>
+  );
+};
+
+export const NewPostModal = () => (
+  <ModalProvider>
+    <MyComponent />
+  </ModalProvider>
+);

@@ -6,9 +6,10 @@ export function PostDetails() {
 
   return (
     <div className="row">
+      <strong>Details:</strong>
       <p className="col">Title: {postDetail.title}</p>
       <p className="col">Categories: {postDetail.categories}</p>
-      <p> className="col"Content: {postDetail.content}</p>
+      <p className="col"> Content: {postDetail.content}</p>
     </div>
   );
 }

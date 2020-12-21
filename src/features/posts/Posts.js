@@ -1,5 +1,4 @@
 import React from "react";
-import { NewPost } from "./NewPost";
 import { PostDetails } from "./PostDetails";
 import { PostList } from "./PostList";
 export function Posts() {
@@ -7,7 +6,6 @@ export function Posts() {
     <div>
       <PostList />
       <PostDetails />
-      <NewPost />
     </div>
   );
 }

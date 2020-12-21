@@ -25,10 +25,7 @@
 .App-link {
   color: rgb(112, 76, 182);
 }
-.App-padding-20{
-  padding-top: 50px;
 
-}
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
