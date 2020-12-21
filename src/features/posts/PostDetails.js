@@ -5,7 +5,7 @@ export function PostDetails() {
   const { postDetail } = data;
 
   return (
-    <div className="row">
+    <div className="container row">
       <strong>Details:</strong>
       <p className="col">Title: {postDetail.title}</p>
       <p className="col">Categories: {postDetail.categories}</p>

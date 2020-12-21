@@ -12,9 +12,6 @@ export const Youtube = (props) => {
     videos: [],
     selectedVideo: null,
   });
-  useEffect(() => {
-    videoSearch("ES6 Videos");
-  }, [props]);
   const videoSearch = _.debounce((term) => {
     YTSearch({ key: API_KEY, term: term }, (videos) => {
       setState({
@@ -23,6 +20,10 @@ export const Youtube = (props) => {
       });
     });
   }, 300);
+  useEffect(() => {
+    videoSearch("ES6 Videos");
+    // eslint-disable-next-line
+  }, [props]);
 
   return (
     <div>
