@@ -3,7 +3,7 @@ import { PostDetails } from "./PostDetails";
 import { PostList } from "./PostList";
 export function Posts() {
   return (
-    <div>
+    <div style={{ paddingTop: "20px" }}>
       <PostList />
       <PostDetails />
     </div>

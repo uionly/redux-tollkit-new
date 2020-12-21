@@ -32,21 +32,23 @@ function RenderComp() {
 }
 function RenderRoutes() {
   return (
-    <div className="row">
-      <nav className="navbar-nav">
-        <ul>
-          <li className="nav-item">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/counter">Counter</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/posts">Posts</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <Link className="nav-link" to="/">
+          Youtube
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/counter">
+          Counter
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/posts">
+          Posts
+        </Link>
+      </li>
+    </ul>
   );
 }
 function Home() {

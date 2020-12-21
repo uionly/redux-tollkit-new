@@ -15,17 +15,13 @@ export const Youtube = (props) => {
   useEffect(() => {
     videoSearch("ES6 Videos");
   }, [props]);
-  const videoSearch = (term) => {
+  const videoSearch = _.debounce((term) => {
     YTSearch({ key: API_KEY, term: term }, (videos) => {
       setState({
         videos: videos,
         selectedVideo: videos[0],
       });
     });
-  };
-
-  _.debounce((term) => {
-    videoSearch(term);
   }, 300);
 
   return (
