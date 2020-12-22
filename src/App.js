@@ -1,7 +1,7 @@
 import { Posts } from "./features/posts/Posts";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Youtube } from "./features/youtube/youtube";
 export default function App() {
   return (
