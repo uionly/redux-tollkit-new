@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/redux-tollkit-new/static/css/main.8dd4d09c.chunk.css",
+    "main.js": "/redux-tollkit-new/static/js/main.9bb47fe2.chunk.js",
+    "main.js.map": "/redux-tollkit-new/static/js/main.9bb47fe2.chunk.js.map",
+    "runtime-main.js": "/redux-tollkit-new/static/js/runtime-main.d23b71b2.js",
+    "runtime-main.js.map": "/redux-tollkit-new/static/js/runtime-main.d23b71b2.js.map",
+    "static/css/2.d5c52700.chunk.css": "/redux-tollkit-new/static/css/2.d5c52700.chunk.css",
+    "static/js/2.4231ef4f.chunk.js": "/redux-tollkit-new/static/js/2.4231ef4f.chunk.js",
+    "static/js/2.4231ef4f.chunk.js.map": "/redux-tollkit-new/static/js/2.4231ef4f.chunk.js.map",
+    "index.html": "/redux-tollkit-new/index.html",
+    "static/css/2.d5c52700.chunk.css.map": "/redux-tollkit-new/static/css/2.d5c52700.chunk.css.map",
+    "static/css/main.8dd4d09c.chunk.css.map": "/redux-tollkit-new/static/css/main.8dd4d09c.chunk.css.map",
+    "static/js/2.4231ef4f.chunk.js.LICENSE.txt": "/redux-tollkit-new/static/js/2.4231ef4f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d23b71b2.js",
+    "static/css/2.d5c52700.chunk.css",
+    "static/js/2.4231ef4f.chunk.js",
+    "static/css/main.8dd4d09c.chunk.css",
+    "static/js/main.9bb47fe2.chunk.js"
+  ]
+}
